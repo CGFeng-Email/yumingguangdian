@@ -1,3 +1,76 @@
-<!--头部开始-->
-<div class="header"></div>
-<!--头部结束-->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+                <img class="logo" alt="煜明光电" src="../../img/logo.png" />
+            </a>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                aria-expanded="false" aria-controls="navbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nav_li">
+                    <a class="nav_li_link" href="./Applications/">Applications <span class="iconfont icon-xiala2 active"></span></a>
+                    <div class="menuDown">
+                        <div class="m_content">
+                            <div class="left_content">
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item list_title">
+                                        Cras justo odio
+                                    </a>
+                                    <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+                                    <a href="#" class="list-group-item">Morbi leo risus</a>
+                                    <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+                                    <a href="#" class="list-group-item">Vestibulum at eros</a>
+                                </div>
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item list_title">
+                                        Cras justo odio
+                                    </a>
+                                    <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+                                    <a href="#" class="list-group-item">Morbi leo risus</a>
+                                    <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+                                    <a href="#" class="list-group-item">Vestibulum at eros</a>
+                                </div>
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item list_title">
+                                        Cras justo odio
+                                    </a>
+                                    <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
+                                    <a href="#" class="list-group-item">Morbi leo risus</a>
+                                    <a href="#" class="list-group-item">Porta ac consectetur ac</a>
+                                    <a href="#" class="list-group-item">Vestibulum at eros</a>
+                                </div>
+                            </div>
+                            
+                            <div class="right_cover">
+                                <img class="cover" src="../../img/menu_cover.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav_li"><a class="nav_li_link" href="./Products">Products <span class="iconfont icon-xiala2"></span></a></li>
+                <li class="nav_li"><a class="nav_li_link" href="./Catalog">Catalog</a></li>
+                <li class="nav_li"><a class="nav_li_link" href="./Contact_us">Contact us</a></li>
+                <li class="nav_li"><a class="nav_li_link" href="./Support">Support</a></li>
+                <li class="nav_li active"><a class="nav_li_link" href="./Company">Company <span class="iconfont icon-xiala2"></span></a></li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+<script>
+    $('#navbar .nav .nav_li').hover(function () {
+        $(this).children('.menuDown').stop().slideDown();
+        $(this).find('.iconfont').addClass('active')
+
+    }, function () {
+        $(this).children('.menuDown').stop().slideUp();
+        $(this).find('.iconfont').removeClass('active')
+    })
+</script>

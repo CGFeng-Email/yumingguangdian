@@ -1,0 +1,92 @@
+.logo {
+   
+}
+
+.navbar {
+    background: pink;
+    margin-bottom: 0;
+    .navbar-header {
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &::before {
+            content: none;
+        }
+        &::after {
+            content: none;
+        }
+        .navbar-brand {
+            width: 228px;
+            height: 56px;
+            padding: 0;
+        }
+    }
+    .nav {
+        .nav_li {
+            height: 120px;
+            .nav_li_link {
+                margin-top: 34px;
+                font-size: 16px;
+                line-height: 26px;
+                color: #000;
+                .iconfont {
+                    font-size: 12px;
+                    color: #000;
+                    transition: all .4s;
+                }
+                .active {
+                    display: inline-block;
+                    transform: rotate(180deg);
+                    color: #FF930D;
+                }
+            }
+            .menuDown {
+                position: fixed;
+                top: 120px;
+                left: 0;
+                right: 0;
+                background: #fff;
+                padding: 20px;
+                box-shadow: 0 0 3px 0px rgba(0,0,0,.2);
+                display: none;
+                
+                .m_content {
+                    
+                    display: flex;
+                    justify-content: space-between;
+                    
+                    .left_content {
+                        display: flex;
+                        .list-group {
+                            .list_title {
+                                font-size: 16px;
+                                font-weight: bold;
+                            }
+                            .list-group-item {
+                                background: none;
+                                border: none;
+                                color: #0A1E33;
+                            }
+                        }
+                    }
+                   
+                    .right_cover {
+                        width: 30%;
+                        
+                        .cover {
+                            width: 100%;
+                            border-radius: 4px;
+                            overflow: hidden;
+                            transition: all .3s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.body {
+    padding-top: 120px;
+}
