@@ -67,7 +67,7 @@
   transform: rotate(180deg);
   color: #FF930D;
 }
-.navbar .nav .nav_li .down {
+.navbar .nav .nav_li .icon {
   display: none;
 }
 .navbar .nav .nav_li .nav_li_link:hover {
@@ -120,6 +120,9 @@
 .navbar .nav .nav_li .menuDown .m_content .right_cover .text {
   margin-top: 20px;
 }
+.navbar .nav .nav_li .h5_menuDown {
+  display: none;
+}
 .navbar .nav .active .nav_li_link {
   background: none;
   color: #FF930D;
@@ -157,10 +160,29 @@
   .navbar #navbar .nav .nav_li .nav_li_wrap .nav_li_link .iconfont {
     display: none;
   }
-  .navbar #navbar .nav .nav_li .nav_li_wrap .down {
+  .navbar #navbar .nav .nav_li .nav_li_wrap .icon {
+    width: 42px;
+    height: 42px;
     display: block;
     padding: 10px 20px;
     cursor: pointer;
+    transition: all 0.3s;
+    padding: 0;
+    line-height: 42px;
+    text-align: center;
+  }
+  .navbar #navbar .nav .nav_li .nav_li_wrap .icon_rolate {
+    transform: rotate(180deg);
+  }
+  .navbar #navbar .nav .nav_li .h5_menuDown {
+    display: none;
+  }
+  .navbar #navbar .nav .nav_li .h5_menuDown .list-group .list-group-item {
+    border: none;
+    padding: 10px 24px;
+  }
+  .navbar #navbar .nav .nav_li:last-child {
+    border-bottom: 0;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {

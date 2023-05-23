@@ -81,7 +81,7 @@
                 }
             }
 
-            .down {
+            .icon {
                 display: none;
             }
 
@@ -148,6 +148,10 @@
                     }
                 }
             }
+
+            .h5_menuDown {
+                display: none;
+            }
         }
 
         .active {
@@ -200,12 +204,35 @@
                                 display: none;
                             }
                         }
-    
-                        .down {
+                        
+                        .icon {
+                            width: 42px;
+                            height: 42px;
                             display: block;
                             padding: 10px 20px;
                             cursor: pointer;
+                            transition: all .3s;
+                            padding: 0;
+                            line-height: 42px;
+                            text-align: center;
                         }
+
+                        .icon_rolate {
+                            transform: rotate(180deg);
+                        }
+                    }
+
+                    .h5_menuDown {
+                        display: none;
+                        .list-group {
+                            .list-group-item {
+                                border: none;
+                                padding: 10px 24px;
+                            }
+                        }
+                    }
+                    &:last-child {
+                        border-bottom: 0;
                     }
                 }
             }
