@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <title>首页</title>
     @@include('head.html')
 </head>
+
 <body>
-@@include('header.html')
-<div class="container-fluid">
-    index
-</div>
-@@include('footer.html')
+    @@include('header.html')
+    <div class="index">
+        <div class="swiper-container banner_swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="cover">
+                        <img class="img" src="../../img/banner.jpg" alt="">
+                    </div>
+                    <div class="content">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @@include('footer.html')
 </body>
+
 </html>
