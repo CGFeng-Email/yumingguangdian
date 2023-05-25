@@ -41,3 +41,45 @@ $('.down_search .clone').click(function () {
     $('.down_search').slideUp()
 })
 
+// 首页banner
+var banner_swiper = new Swiper('.banner_swiper', {
+    autoplay: {
+        disableOnInteraction: false,
+    }, 
+    loop: true,
+    on: {
+        init: function () {
+            swiperAnimateCache(this); //隐藏动画元素
+            swiperAnimate(this); //初始化完成开始动画
+        },
+        slideChange: function () {
+            swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
+        }
+    }
+})
+
+// banner下拉菜单
+$('.banner_swiper .swiper_nav .down').click(function () {
+    let i = $(this).index();
+
+    $('.index .menu_list .item').stop().slideUp();
+    
+    // console.log($(this).hasClass('active'));
+    
+    if($(this).hasClass('active')) {
+        $('.banner_swiper .swiper_nav .down').removeClass('active');
+        $('.banner_swiper .swiper_nav .down .iconfont').removeClass('iconfont_active')
+    } else {
+        $(this).addClass('active').siblings().removeClass('active');
+        $(this).siblings().children('.iconfont').removeClass('iconfont_active');
+        $(this).children('.iconfont').addClass('iconfont_active')
+    }
+
+    $('.index .menu_list .item').eq(i).stop().slideToggle();
+})
+
+// h5 banner下拉菜单
+$('.index .menu_list .h5_menu_list .head').click(function () {
+    $(this).parent().siblings().children('.list_content').stop().slideUp()
+    $(this).siblings('.list_content').stop().slideToggle();
+})
