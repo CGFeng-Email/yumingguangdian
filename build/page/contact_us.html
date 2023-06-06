@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact us</title>
+    @@include('head.html')
+    <script src="https://map.qq.com/api/gljs?v=1.exp&key=PDUBZ-4FWWS-UDHO6-6BZXS-WRML7-LAFJ4"></script>
+</head>
+
+
+<body onload="initMap()">
+    @@include('header.html')
+    <div class="contact_us">
+        <!-- 面包屑 -->
+        <div class="crumbs_wrap">
+            <div class="container">
+                <div class="content">
+                    <ol class="breadcrumb wow slideInLeft" data-wow-duration="1.2s">
+                        <li><a href="#">Home</a></li>
+                        <li class="active">Contact us</li>
+                    </ol>
+                    <div class="title_wrap">
+                        <h3 class="h3_title text-center wow fadeInUp" data-wow-duration="1.2s">Contact us</h3>
+                        <h4 class="h4_title text-center wow fadeInUp" data-wow-duration="1.6s">If you have any questions
+                            can contact us, 24 hours online service
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="info">
+            <div class="container">
+                <div class="row">
+                    <div class="item col-xs-12 col-sm-8 col-md-8">
+                        <h4 class="title text-uppercase wow slideInLeft" data-wow-duration="1s">Foshan Yu Ming
+                            photoelectric technology co., LTD</h4>
+                        <div class="line"></div>
+                        <ul class="ul">
+                            <li class="li wow slideInLeft" data-wow-duration="1.2s">
+                                Tele & Whatsapp:+0769-8509 6899
+                            </li>
+                            <li class="li wow slideInLeft" data-wow-duration="1.4s">
+                                E-mail:lmp@lumenpioneer.com
+                            </li>
+                            <li class="li wow slideInLeft" data-wow-duration="1.6s">
+                                Adderss:Guangdong dongguan DaLing hills serial gen garden road no. 36 families can remit
+                            </li>
+                            <li class="li wow slideInLeft" data-wow-duration="1.8s">
+                                two building five layer
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="item right_item col-xs-12 col-sm-4 col-md-4">
+                        <div class="wrap wow slideInRight" data-wow-duration="1.8s">
+                            <div class="cover">
+                                <img class="img" src="../../img/code.png" alt="">
+                            </div>
+                            <p class="text">Pay attention to the public,</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div id="map_box"></div>
+        </div>
+       
+    </div>
+    @@include('footer.html')
+</body>
+
+<script>
+    //地图初始化函数，本例取名为init，开发者可根据实际情况定义
+    function initMap() {
+
+        //定义地图中心点坐标
+        var center = new TMap.LatLng(23.061369, 113.159009)
+
+        var map = new TMap.Map("map_box", {
+            center: center,
+            zoom: 19
+        });
+
+        //初始化infoWindow
+        var infoWindow = new TMap.InfoWindow({
+            map: map,
+            position: center, //设置信息框位置
+            content: '佛山市南海区桂城街道永胜西路22号新凯广场2座1722' //设置信息框内容
+        });
+
+    }
+</script>
+
+</html>

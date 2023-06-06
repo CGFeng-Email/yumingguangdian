@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="../../layui/css/layui.css">
+    @@include('head.html')
+</head>
+
+<body>
+    @@include('header.html')
+    <div class="product_details">
+        <!-- 面包屑 -->
+        <div class="crumbs_wrap">
+            <div class="container">
+                <div class="content">
+                    <ol class="breadcrumb wow slideInLeft" data-wow-duration="1.2s">
+                        <li><a href="#">Home</a></li>
+                        <li class="active">Product Details</li>
+                    </ol>
+                    <div class="product_banner">
+                        <div class="row">
+                            <div class="item col-xs-12 col-sm-12 col-md-5">
+                                <div class="cover wow slideInLeft" data-wow-duration="1.2s">
+                                    <img class="img" src="../../img/product_details.png" alt="">
+                                </div>
+                            </div>
+                            <div class="item col-xs-12 col-sm-12 col-md-7 wow slideInRight" data-wow-duration="1.2s">
+                                <p class="title">XLamp® XD/XQ LEDs</p>
+                                <p class="text">XLamp XD & XQ 1.6 mm footprint LEDs span a wide range of design options,
+                                    from the high reliability ceramic mid-power XQ-A family up to the extreme lumen
+                                    density XD16 family. XLamp XQ family LEDs are optimized for outdoor architectural
+                                    lighting and emergency vehicle lighting applications where precise optical control
+                                    must be achieved in the smallest possible physical space. XLamp XD16 LEDs are
+                                    optimized for maximum lumen density and easily outperform chip-scale-package (CSP)
+                                    LEDs in LED array applications.</p>
+                                <ul class="ul">
+                                    <li>
+                                        1.6 x 1.6 mm footprint
+                                    </li>
+                                    <li>
+                                        Single LED die per package for best optical control
+                                    </li>
+                                    <li>
+                                        Proven reliability in harsh environment outdoor and transportation lighting
+                                        applications
+                                    </li>
+                                </ul>
+                                <p class="title">XLamp® XD/XQ LEDs</p>
+                                <ul class="ul">
+                                    <li>
+                                        1.6 x 1.6 mm footprint
+                                    </li>
+                                    <li>
+                                        Single LED die per package for best optical control
+                                    </li>
+                                    <li>
+                                        Proven reliability in harsh environment outdoor and transportation lighting
+                                        applications
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="bottom_box">
+                            <a class="btn btn-default text-uppercase" href="#">XLAMP WHITE LEDS FEATURE SHEET</a>
+                            <a class="btn btn-default text-uppercase" href="#">COLOR LEDS FEATURE SHEET</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 表格 -->
+        <div class="table_content">
+            <div class="container">
+                <div class="head">
+                    Specifications
+                </div>
+                <!-- 下拉选择框 -->
+                <div class="select_wrap">
+                    <div class="row">
+                        <div class="item col-xs-12 col-sm-6 col-md-3 wow fadeInUp" data-wow-duration="1s">
+                            <p class="title">COLOR</p>
+                            <div class="layui-form layui-row layui-col-space16">
+                                <div class="layui-col-md12">
+                                    <select lay-filter="demo-select-color">
+                                        <option value="">ALL</option>
+                                        <option value="AAA">选项 A</option>
+                                        <option value="BBB">选项 B</option>
+                                        <option value="CCC">选项 C</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item col-xs-12 col-sm-6 col-md-3 wow fadeInUp" data-wow-duration="1.2s">
+                            <p class="title">OPTICAL CHARACTERISTIC</p>
+                            <div class="layui-form layui-row layui-col-space16">
+                                <div class="layui-col-md12">
+                                    <select lay-filter="demo-select-optical">
+                                        <option value="">ALL</option>
+                                        <option value="AAA">选项 A</option>
+                                        <option value="BBB">选项 B</option>
+                                        <option value="CCC">选项 C</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item col-xs-12 col-sm-6 col-md-3 wow fadeInUp" data-wow-duration="1.4s">
+                            <p class="title">CRI</p>
+                            <div class="layui-form layui-row layui-col-space16">
+                                <div class="layui-col-md12">
+                                    <select lay-filter="demo-select-cri">
+                                        <option value="">ALL</option>
+                                        <option value="AAA">选项 A</option>
+                                        <option value="BBB">选项 B</option>
+                                        <option value="CCC">选项 C</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product_table wow fadeInUp" data-wow-duration="1s">
+                    <h5 class="table_title">31 of 31 products</h5>
+                    <!-- 表单demo1 -->
+                    <div class="table_item">
+                        <table class="layui-table" id="tableDemo1"></table>
+                    </div>
+                </div>
+                <!-- document, 展开列表 -->
+                <div class="document_table_list wow fadeInUp" data-wow-duration="1s">
+                    <h5 class="head">Documentation</h5>
+                    <div class="document_item opentable">
+                        <table class="layui-table" id="document1">
+                            <div class="rotate_icon">
+                                <i class="iconfont icon-shang1 active"></i>
+                            </div>
+                        </table>
+                    </div>
+                    <div class="document_item">
+                        <table class="layui-table" id="document2">
+                            <div class="rotate_icon">
+                                <i class="iconfont icon-shang1"></i>
+                            </div>
+                        </table>
+                    </div>
+                    <div class="document_item">
+                        <table class="layui-table" id="document3">
+                            <div class="rotate_icon">
+                                <i class="iconfont icon-shang1"></i>
+                            </div>
+                        </table>
+                    </div>
+                </div>
+                <!-- 搜索 -->
+                <div class="search_wrap">
+                    <h5 class="head text-uppercase">SEARCH DOCUMENTS BY</h5>
+                    <div class="layui-form wow fadeInUp" data-wow-duration="1s">
+                        <div class="layui-input-wrap">
+                            <!-- <div class="layui-input-prefix">
+                              <i class="layui-icon layui-icon-username"></i>
+                            </div> -->
+                            <input type="text" lay-affix="search" lay-filter="search" lay-options="{split: true}"
+                                placeholder="Please enter the keywords" class="layui-input">
+                        </div>
+                    </div>
+                </div>
+                <!-- 多选, 下拉, 表格 -->
+                <div class="checkout_wrap">
+                    <div class="row">
+                        <div class="item col-xs-12 col-sm-12 col-md-4 col-lg-4 wow slideInLeft" data-wow-duration="1.2s">
+                            <div class="checkout_list layui-form">
+                                <div class="list_item_wrap">
+                                    <div class="check_head">
+                                        <h5 class="check_title text-uppercase">SEARCH IN</h5>
+                                        <i class="iconfont icon-shang1"></i>
+                                    </div>
+                                    <div class="list">
+                                        <div class="check_li">
+                                            <input type="checkbox" name="check-1-1" value="check-1-1" title="Data Sheet（304）" lay-filter="demo-checkbox-filter">
+                                        </div>
+                                        <div class="check_li">
+                                            <input type="checkbox" name="check-1-2" value="check-1-2" title="Design File（255）" lay-filter="demo-checkbox-filter">
+                                        </div>
+                                        <div class="check_li">
+                                            <input type="checkbox" name="check-1-3" value="check-1-3" title="Product Ecology（208）" lay-filter="demo-checkbox-filter">
+                                        </div>
+                                        <div class="check_li">
+                                            <input type="checkbox" name="check-1-4"  value="check-1-4" title="Application Note（50）" lay-filter="demo-checkbox-filter">
+                                        </div>
+                                        <div class="check_li">
+                                            <input type="checkbox" name="check-1-5" value="check-1-5" title="Optical Model (ProSource) Colors(15)" lay-filter="demo-checkbox-filter">
+                                        </div>
+                                        <div class="check_li">
+                                            <input type="checkbox" name="check-1-6" value="check-1-6" title="Product Ecology (REACH)(15)" lay-filter="demo-checkbox-filter">
+                                        </div>
+                                        <div class="check_li">
+                                            <input type="checkbox" name="check-1-7" value="check-1-7" title="Product Ecology (RoHS)(15)" lay-filter="demo-checkbox-filter">
+                                        </div>
+                                        <div class="check_li>
+                                            <input type=" checkbox" name="check-1-8"
+                                            title="Product Guide/Feature Sheet(13)">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="list_item_wrap">
+                                    <div class="check_head">
+                                        <h5 class="check_title text-uppercase">PRODUCT CATEGORY</h5>
+                                        <i class="iconfont icon-shang1"></i>
+                                    </div>
+                                    <div class="list">
+                                        <div class="check_li">
+                                            <input type="checkbox" name="check-2-1" value="check-2-1" title="Data Sheet（304）" lay-filter="demo-checkbox-filter">
+                                        </div>
+                                        <div class="check_li">
+                                            <input type="checkbox" name="check-2-2" value="check-2-2" title="Design File（255）" lay-filter="demo-checkbox-filter">
+                                        </div>
+                                        <div class="check_li">
+                                            <input type="checkbox" name="check-2-3" value="check-2-3" title="Product Ecology（208）" lay-filter="demo-checkbox-filter">
+                                        </div>
+                                        <div class="check_li">
+                                            <input type="checkbox" name="check-2-4" value="check-2-4" title="Application Note（50）" lay-filter="demo-checkbox-filter">
+                                        </div>
+                                        <div class="check_li">
+                                            <input type="checkbox" name="check-2-5" value="check-2-5" title="Optical Model (ProSource) Colors(15)" lay-filter="demo-checkbox-filter">
+                                        </div>
+                                        <div class="check_li">
+                                            <input type="checkbox" name="check-2-6" value="check-2-6" title="Product Ecology (REACH)(15)" lay-filter="demo-checkbox-filter">
+                                        </div>
+                                        <div class="check_li">
+                                            <input type="checkbox" name="check-2-7" value="check-2-7" title="Product Ecology (RoHS)(15)" lay-filter="demo-checkbox-filter">
+                                        </div>
+                                        <div class="check_li">
+                                            <input type="checkbox" name="check-2-8" value="check-2-8" title="Product Guide/Feature Sheet(13)" lay-filter="demo-checkbox-filter">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="list_item_wrap">
+                                    <div class="check_head">
+                                        <h5 class="check_title">PRODUCT CATEGORY</h5>
+                                        <i class="iconfont icon-shang1"></i>
+                                    </div>
+                                    <div class="list">
+                                        <div class="check_li">
+                                            <input type="checkbox" name="check-1-1" title="Data Sheet（304）">
+                                        </div>
+                                        <div class="check_li">
+                                            <input type="checkbox" name="check-1-2" title="Design File（255）">
+                                        </div>
+                                        <div class="check_li">
+                                            <input type="checkbox" name="check-1-3" title="Product Ecology（208）">
+                                        </div>
+                                        <div class="check_li">
+                                            <input type="checkbox" name="check-1-4" title="Application Note（50）">
+                                        </div>
+                                        <div class="check_li">
+                                            <input type="checkbox" name="check-1-5"
+                                                title="Optical Model (ProSource) Colors(15)">
+                                        </div>
+                                        <div class="check_li">
+                                            <input type="checkbox" name="check-1-6" title="Product Ecology (REACH)(15)">
+                                        </div>
+                                        <div class="check_li">
+                                            <input type="checkbox" name="check-1-7" title="Product Ecology (RoHS)(15)">
+                                        </div>
+                                        <div class="check_li">
+                                            <input type="checkbox" name="check-1-8"
+                                                title="Product Guide/Feature Sheet(13)">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list_item_wrap">
+                                    <div class="check_head">
+                                        <h5 class="check_title text-uppercase">PRODUCT CATEGORY</h5>
+                                        <i class="iconfont icon-shang1"></i>
+                                    </div>
+                                    <div class="list">
+                                        <div class="check_li">
+                                            <input type="checkbox" name="check-1-1" title="Data Sheet（304）">
+                                        </div>
+                                        <div class="check_li">
+                                            <input type="checkbox" name="check-1-2" title="Design File（255）">
+                                        </div>
+                                        <div class="check_li">
+                                            <input type="checkbox" name="check-1-3" title="Product Ecology（208）">
+                                        </div>
+                                        <div class="check_li">
+                                            <input type="checkbox" name="check-1-4" title="Application Note（50）">
+                                        </div>
+                                        <div class="check_li">
+                                            <input type="checkbox" name="check-1-5"
+                                                title="Optical Model (ProSource) Colors(15)">
+                                        </div>
+                                        <div class="check_li">
+                                            <input type="checkbox" name="check-1-6" title="Product Ecology (REACH)(15)">
+                                        </div>
+                                        <div class="check_li">
+                                            <input type="checkbox" name="check-1-7" title="Product Ecology (RoHS)(15)">
+                                        </div>
+                                        <div class="check_li">
+                                            <input type="checkbox" name="check-1-8"
+                                                title="Product Guide/Feature Sheet(13)">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item col-xs-12 col-sm-12 col-md-8 col-lg-8 wow slideInRight" data-wow-duration="1.2s">
+                            <h5 class="check_table_title">15 of 894 documents</h5>
+                            <table class="layui-table" id="checkout_table">
+                                <div class="rotate_icon">
+                                    <i class="iconfont icon-shang1"></i>
+                                </div>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @@include('footer.html')
+</body>
+<!-- <script src="../../table_json/user.json"></script> -->
+<script src="../../layui/layui.js"></script>
+<script>
+    // 表格demo1
+    var tableData1 = [];
+    // 表格document1
+    var document1 = [];
+    // 表格document2
+    var document2 = [];
+
+    // 表格demo1
+    $.ajax({
+        async: false,
+        url: 'https://quanyi-1317202885.cos.ap-guangzhou.myqcloud.com/json/user.json',
+        timeout: 5000,
+        type: 'GET',
+        dataType: 'JSON',
+        success: function (res) {
+            console.log('res', res);
+            tableData1 = res.data
+        }
+    })
+
+    // document1
+    $.ajax({
+        async: false,
+        url: 'https://quanyi-1317202885.cos.ap-guangzhou.myqcloud.com/json/document-1.json',
+        timeout: 5000,
+        type: 'GET',
+        dataType: 'JSON',
+        success: function (res) {
+            console.log('res', res);
+            document1 = res.data
+        }
+    })
+
+    // 初始化
+    layui.use(function () {
+        var form = layui.form;
+        var layer = layui.layer;
+        var table = layui.table;
+        var laypage = layui.laypage;
+
+        form.on('select(demo-select-color)', function (data) {
+            console.log(data);
+        });
+
+        form.on('select(demo-select-optical)', function (data) {
+            console.log(data);
+        });
+
+        form.on('select(demo-select-cri)', function (data) {
+            console.log(data);
+        });
+
+        // 搜索
+        form.on('input-affix(search)', function (data) {
+            var elem = data.elem; // 输入框
+            var value = elem.value; // 输入框的值
+            if (!value) {
+                layer.msg('Please enter the search content');
+                return elem.focus()
+            };
+            // 模拟搜索跳转
+            location.href = '?keywords=' + value + '&_' + new Date().getTime() + '#affix-custom';
+        });
+
+        // 多选复选框
+        form.on('checkbox(demo-checkbox-filter)', function (data) {
+            var elem = data.elem; // 获得 checkbox 原始 DOM 对象
+            var checked = elem.checked; // 获得 checkbox 选中状态
+            var value = elem.value; // 获得 checkbox 值
+            var othis = data.othis; // 获得 checkbox 元素被替换后的 jQuery 对象
+
+            console.log('value', value);
+            console.log('checked', checked);
+        });
+
+        // 表格 demo1
+        table.render({
+            elem: '#tableDemo1', // table id 模板
+            data: tableData1,
+            count: tableData1.length, // 数据总数量
+            limits: [5, 10, 20, 50, 100],
+            toolbar: true, // 顶部工具栏
+            page: {
+                layout: ['limit', 'count', 'prev', 'page', 'next', 'skip'], //自定义分页布局
+                curr: 1, //设定初始在第 5 页
+                groups: 5, // 连续页码
+                first: false, //不显示首页
+                last: false //不显示尾页
+            },
+
+            theme: '#FF930D', // 主色调
+            hash: 'curr',
+            height: 'full-35',
+            maxHeight: 700,
+            // 表头
+            cols: [
+                [{
+                        field: 'ProductType',
+                        title: 'Product Type',
+                        width: 160,
+                        style: 'font-size: 14px; color: #565656; height: 60px; line-height: 60px;',
+                        align: 'center'
+                    },
+                    {
+                        field: 'Product',
+                        title: 'Product',
+                        width: 170,
+                        style: 'font-size: 14px; color: #565656; height: 60px; line-height: 60px;',
+                        align: 'center',
+                        sort: true
+                    },
+                    {
+                        field: 'DataSheet',
+                        title: 'Data Sheet',
+                        width: 120,
+                        style: 'font-size: 14px; color: #565656; height: 60px; line-height: 60px;',
+                        align: 'center'
+                    },
+                    {
+                        field: 'ProductStatus',
+                        title: 'Product Status',
+                        width: 160,
+                        style: 'font-size: 14px; color: #565656; height: 60px; line-height: 60px;',
+                        align: 'center'
+                    },
+                    {
+                        field: 'color',
+                        title: 'color',
+                        sort: true,
+                        width: 160,
+                        style: 'font-size: 14px; color: #565656; height: 60px; line-height: 60px;',
+                        align: 'center'
+                    },
+                    {
+                        field: 'OpticalCharacteris',
+                        title: 'Optical Characteris',
+                        sort: true,
+                        width: 200,
+                        style: 'font-size: 14px; color: #565656; height: 60px; line-height: 60px;',
+                        align: 'center'
+                    },
+                    {
+                        field: 'ColorSpecType',
+                        title: 'Color SpecType',
+
+                        sort: true,
+                        width: 180,
+                        style: 'font-size: 14px; color: #565656; height: 60px; line-height: 60px;',
+                        align: 'center'
+                    },
+                    {
+                        field: 'ColorMin',
+                        title: 'Color Min',
+                        sort: true,
+                        width: 120,
+                        style: 'font-size: 14px; color: #565656; height: 60px; line-height: 60px;',
+                        align: 'center'
+                    },
+                    {
+                        field: 'ColorMan',
+                        title: 'Color Man',
+                        sort: true,
+                        width: 140,
+                        style: 'font-size: 14px; color: #565656; height: 60px; line-height: 60px;',
+                        align: 'center'
+                    },
+                    {
+                        field: 'CRIOptions',
+                        title: 'CRI Options',
+                        width: 160,
+                        style: 'font-size: 14px; color: #565656; height: 60px; line-height: 60px;',
+                        align: 'center'
+                    },
+                ]
+            ]
+        });
+
+
+        // ocument,展开表格列表
+        // document1
+        table.render({
+            elem: '#document1', // table id 模板
+            data: document1,
+            count: document1.length, // 数据总数量
+            limits: [5, 10, 20, 50, 100],
+            toolbar: true, // 顶部工具栏
+            page: {
+                layout: ['limit', 'count', 'prev', 'page', 'next', 'skip'], //自定义分页布局
+                curr: 1, //设定初始在第 5 页
+                groups: 5, // 连续页码
+                first: false, //不显示首页
+                last: false //不显示尾页
+            },
+
+            theme: '#FF930D', // 主色调
+            hash: 'curr',
+            height: 'full-35',
+            maxHeight: 700,
+            // 表头
+            cols: [
+                [{
+                        field: 'DataSheet',
+                        title: 'Data Sheet',
+                        style: 'font-size: 14px; color: #565656; height: 60px; line-height: 60px;',
+                        align: 'left'
+                    },
+                    {
+                        field: 'Version',
+                        title: 'Version',
+                        width: 170,
+                        style: 'font-size: 14px; color: #565656; height: 60px; line-height: 60px;',
+                        align: 'center',
+                        sort: true
+                    },
+                    {
+                        field: 'LastUpdated',
+                        title: 'Last Updated',
+                        width: 170,
+                        style: 'font-size: 14px; color: #565656; height: 60px; line-height: 60px;',
+                        align: 'center',
+                        sort: true
+                    }
+                ]
+            ]
+        });
+
+        // document2
+        table.render({
+            elem: '#document2', // table id 模板
+            data: document1,
+            count: tableData1.length, // 数据总数量
+            limits: [5, 10, 20, 50, 100],
+            toolbar: true, // 顶部工具栏
+            page: {
+                layout: ['limit', 'count', 'prev', 'page', 'next', 'skip'], //自定义分页布局
+                curr: 1, //设定初始在第 5 页
+                groups: 5, // 连续页码
+                first: false, //不显示首页
+                last: false //不显示尾页
+            },
+
+            theme: '#FF930D', // 主色调
+            hash: 'curr',
+            height: 'full-35',
+            maxHeight: 700,
+            // 表头
+            cols: [
+                [{
+                        field: 'DataSheet',
+                        title: 'Data Sheet',
+                        style: 'font-size: 14px; color: #565656; height: 60px; line-height: 60px;',
+                        align: 'left'
+                    },
+                    {
+                        field: 'Version',
+                        title: 'Version',
+                        width: 170,
+                        style: 'font-size: 14px; color: #565656; height: 60px; line-height: 60px;',
+                        align: 'center',
+                        sort: true
+                    },
+                    {
+                        field: 'LastUpdated',
+                        title: 'Last Updated',
+                        width: 170,
+                        style: 'font-size: 14px; color: #565656; height: 60px; line-height: 60px;',
+                        align: 'center',
+                        sort: true
+                    }
+                ]
+            ]
+        });
+
+        // document2
+        table.render({
+            elem: '#document3', // table id 模板
+            data: document1,
+            count: document1.length, // 数据总数量
+            limits: [5, 10, 20, 50, 100],
+            toolbar: true, // 顶部工具栏
+            page: {
+                layout: ['limit', 'count', 'prev', 'page', 'next', 'skip'], //自定义分页布局
+                curr: 1, //设定初始在第 5 页
+                groups: 5, // 连续页码
+                first: false, //不显示首页
+                last: false //不显示尾页
+            },
+
+            theme: '#FF930D', // 主色调
+            hash: 'curr',
+            height: 'full-35',
+            maxHeight: 700,
+            // 表头
+            cols: [
+                [{
+                        field: 'DataSheet',
+                        title: 'Data Sheet',
+                        style: 'font-size: 14px; color: #565656; height: 60px; line-height: 60px;',
+                        align: 'left'
+                    },
+                    {
+                        field: 'Version',
+                        title: 'Version',
+                        width: 170,
+                        style: 'font-size: 14px; color: #565656; height: 60px; line-height: 60px;',
+                        align: 'center',
+                        sort: true
+                    },
+                    {
+                        field: 'LastUpdated',
+                        title: 'Last Updated',
+                        width: 170,
+                        style: 'font-size: 14px; color: #565656; height: 60px; line-height: 60px;',
+                        align: 'center',
+                        sort: true
+                    }
+                ]
+            ]
+        });
+
+        // checkout table
+        table.render({
+            elem: '#checkout_table', // table id 模板
+            data: document1,
+            count: document1.length, // 数据总数量
+            limits: [5, 10, 20, 50, 100],
+            toolbar: true, // 顶部工具栏
+            page: {
+                layout: ['limit', 'count', 'prev', 'page', 'next', 'skip'], //自定义分页布局
+                curr: 1, //设定初始在第 5 页
+                groups: 5, // 连续页码
+                first: false, //不显示首页
+                last: false //不显示尾页
+            },
+
+            theme: '#FF930D', // 主色调
+            hash: 'curr',
+            height: 'full-35',
+            maxHeight: 700,
+            // 表头
+            cols: [
+                [{
+                        field: 'DataSheet',
+                        title: 'Data Sheet',
+                        style: 'font-size: 14px; color: #565656; height: 60px; line-height: 60px;',
+                        align: 'left'
+                    },
+                    {
+                        field: 'Version',
+                        title: 'Version',
+                        width: 170,
+                        style: 'font-size: 14px; color: #565656; height: 60px; line-height: 60px;',
+                        align: 'center',
+                        sort: true
+                    },
+                    {
+                        field: 'LastUpdated',
+                        title: 'Last Updated',
+                        width: 170,
+                        style: 'font-size: 14px; color: #565656; height: 60px; line-height: 60px;',
+                        align: 'center',
+                        sort: true
+                    }
+                ]
+            ]
+        });
+
+    });
+
+    // document_table_list 展开
+    $('.document_item .rotate_icon').click(function () {
+        $(this).parents('.document_item').find('.layui-table-body').stop().slideToggle();
+        $(this).parents('.document_item').find('.layui-table-page').stop().slideToggle();
+        $(this).find('.iconfont').stop().toggleClass('active');
+    })
+
+    // 复选框
+    $('.product_details .checkout_wrap .checkout_list .check_head').click(function () {
+        $(this).siblings('.list').stop().slideToggle();
+    })
+</script>
+
+</html>
