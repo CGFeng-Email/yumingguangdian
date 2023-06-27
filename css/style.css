@@ -27,6 +27,11 @@ a:hover {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
 html {
   overflow-x: hidden;
 }
@@ -207,10 +212,13 @@ body {
 }
 .navbar .nav .nav_li .menuDown .m_content .left_content {
   display: flex;
+  flex-wrap: wrap;
 }
 .navbar .nav .nav_li .menuDown .m_content .left_content .list-group .list_title {
   font-size: 16px;
   font-weight: bold;
+  word-break: keep-all;
+  white-space: normal;
 }
 .navbar .nav .nav_li .menuDown .m_content .left_content .list-group .list_title:hover {
   color: #FF930D;
@@ -236,6 +244,12 @@ body {
 }
 .navbar .nav .nav_li .menuDown .m_content .right_cover .text {
   margin-top: 20px;
+}
+.navbar .nav .nav_li .menuDown .m_content::after {
+  content: none;
+}
+.navbar .nav .nav_li .menuDown .m_content::before {
+  content: none;
 }
 .navbar .nav .nav_li .h5_menuDown {
   display: none;
@@ -411,10 +425,11 @@ body {
 }
 .index .menu_list .item .content {
   display: flex;
+  flex-wrap: wrap;
   padding: 0.3rem;
 }
 .index .menu_list .item .content .list-group {
-  margin-right: 0.4rem;
+  margin-right: 0.3rem;
 }
 .index .menu_list .item .content .list-group .list_title {
   font-size: 0.28rem;
@@ -544,6 +559,9 @@ body {
   font-size: 0.34rem;
   margin-right: 10px;
 }
+.index .stay_update .container .content_wrap .c_message .form_wrap {
+  padding-right: 0.3rem;
+}
 .index .stay_update .container .content_wrap .c_message .form_wrap .row {
   margin: 0;
 }
@@ -572,11 +590,13 @@ body {
   border: 1px solid #FF930D;
   border-radius: 4px 0 4px 0;
   width: 1.56rem;
+  outline: none;
+  border: 0;
+  box-shadow: 0;
 }
 .index .stay_update .container .content_wrap .r_contact_us .item {
   width: 90%;
   margin: auto;
-  padding-left: 0.2rem;
 }
 .index .stay_update .container .content_wrap .r_contact_us .item .head {
   color: #000;
@@ -653,6 +673,13 @@ body {
   padding: 0;
   text-align: center;
   border-radius: 0.5rem;
+  outline: none;
+  border: 0;
+  box-shadow: none;
+  transition: all 0.3s;
+}
+.index .news .content_wrap .l_content .btn:hover {
+  background: #0A1E33;
 }
 .index .news .content_wrap .r_swiper .swiper_news {
   max-height: 4.92rem;
@@ -917,7 +944,9 @@ body {
   background-color: #fff;
   color: #FF930D;
   border-color: #FF930D;
+  outline: none;
   box-shadow: none;
+  border: 0;
 }
 .news .nav_menu .content_wrap .active {
   background-color: #FF930D;
@@ -939,6 +968,9 @@ body {
   padding: 0;
   text-align: center;
   border-radius: 0.5rem;
+  outline: none;
+  box-shadow: none;
+  border: 0;
 }
 .news .news_banner .content_wrap .r_swiper .swiper_news {
   max-height: 4.92rem;
@@ -1121,6 +1153,10 @@ body {
   background: #FF930D;
   color: #fff;
   border: none;
+  transition: all 0.3s;
+}
+.product_details .crumbs_wrap .product_banner .bottom_box .btn:hover {
+  background: #0A1E33;
 }
 .product_details .table_content {
   padding: 0.3rem 0;
@@ -1145,6 +1181,8 @@ body {
 }
 .product_details .table_content .select_wrap {
   padding: 0.3rem 0;
+  position: relative;
+  z-index: 6;
 }
 .product_details .table_content .select_wrap .layui-form-select .layui-edge {
   border-top-color: #FF930D;
@@ -1187,13 +1225,10 @@ body {
 .product_details .table_content .document_item .layui-table thead {
   cursor: pointer;
 }
-.product_details .table_content .document_item .layui-table thead tr th:nth-child(1) {
-  padding-left: 38px;
-}
 .product_details .table_content .document_item .rotate_icon {
   position: absolute;
   top: 56px;
-  left: -2px;
+  left: -15px;
   z-index: 10;
   cursor: pointer;
   padding: 20px 50px 20px 20px;

@@ -33,6 +33,12 @@ a:hover {
     text-overflow: ellipsis;
 }
 
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
 html {
     overflow-x: hidden;
 }
@@ -261,18 +267,19 @@ body {
                 display: none;
 
                 .m_content {
-
                     display: flex;
                     justify-content: space-between;
-
                     .left_content {
                         display: flex;
+                        flex-wrap: wrap;
 
                         .list-group {
+
                             .list_title {
                                 font-size: 16px;
                                 font-weight: bold;
-
+                                word-break: keep-all;
+                                white-space: normal;
                                 &:hover {
                                     color: #FF930D;
                                 }
@@ -306,6 +313,14 @@ body {
                             margin-top: 20px;
                         }
                     }
+                }
+
+                .m_content::after {
+                    content: none;
+                }
+
+                .m_content::before {
+                    content: none;
                 }
             }
 
@@ -541,10 +556,11 @@ body {
 
             .content {
                 display: flex;
+                flex-wrap: wrap;
                 padding: .3rem;
 
                 .list-group {
-                    margin-right: .4rem;
+                    margin-right: .3rem;
 
                     .list_title {
                         font-size: .28rem;
@@ -714,6 +730,7 @@ body {
 
                 .c_message {
                     .form_wrap {
+                        padding-right: .3rem;
                         .row {
                             margin: 0;
 
@@ -749,6 +766,9 @@ body {
                             border: 1px solid #FF930D;
                             border-radius: 4px 0 4px 0;
                             width: 1.56rem;
+                            outline: none;
+                            border: 0;
+                            box-shadow: 0;
                         }
                     }
                 }
@@ -758,7 +778,6 @@ body {
                     .item {
                         width: 90%;
                         margin: auto;
-                        padding-left: .2rem;
 
                         .head {
                             color: #000;
@@ -854,6 +873,13 @@ body {
                     padding: 0;
                     text-align: center;
                     border-radius: .5rem;
+                    outline: none;
+                    border: 0;
+                    box-shadow: none;
+                    transition: all .3s;
+                }
+                .btn:hover {
+                   background: #0A1E33;
                 }
             }
 
@@ -1210,6 +1236,9 @@ body {
                 color: #FF930D;
                 border-color: #FF930D;
                 box-shadow: none;
+                outline: none;
+                box-shadow: none;
+                border: 0;
             }
 
             .active {
@@ -1238,6 +1267,9 @@ body {
                     padding: 0;
                     text-align: center;
                     border-radius: .5rem;
+                    outline: none;
+                    box-shadow: none;
+                    border: 0;
                 }
             }
 
@@ -1475,6 +1507,10 @@ body {
                     background: #FF930D;
                     color: #fff;
                     border: none;
+                    transition: all .3s;
+                    &:hover {
+                        background: #0A1E33;
+                    }
                 }
             }
         }
@@ -1505,6 +1541,8 @@ body {
 
         .select_wrap {
             padding: .3rem 0;
+            position: relative;
+            z-index: 6;
 
             .layui-form-select .layui-edge {
                 border-top-color: #FF930D;
@@ -1563,7 +1601,7 @@ body {
 
                 tr {
                     th:nth-child(1) {
-                        padding-left: 38px;
+                        // padding-left: 38px;
                     }
                 }
             }
@@ -1571,7 +1609,7 @@ body {
             .rotate_icon {
                 position: absolute;
                 top: 56px;
-                left: -2px;
+                left: -15px;
                 z-index: 10;
                 cursor: pointer;
                 padding: 20px 50px 20px 20px;
