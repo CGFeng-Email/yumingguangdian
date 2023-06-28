@@ -544,8 +544,6 @@ body {
 }
 .index .stay_update .container .content_wrap {
   padding: 0.8rem 0;
-  display: flex;
-  justify-content: space-between;
 }
 .index .stay_update .container .content_wrap .box .head {
   display: flex;
@@ -782,7 +780,6 @@ body {
 }
 .applications .applications_list .content .item .down .link {
   margin-top: 0.12rem;
-  width: 1.54rem;
   background: #FF930D;
   color: #fff;
   border: 1px solid #FF930D;
@@ -845,6 +842,18 @@ body {
 }
 .support_team .request_data {
   padding: 0.3rem 0 0.4rem;
+}
+.support_team .request_data .layui-form-radio:hover > * {
+  color: #FF930D;
+}
+.support_team .request_data .layui-form-radioed > i {
+  color: #FF930D;
+}
+.support_team .request_data .layui-form-radioed {
+  color: #FF930D;
+}
+.support_team .request_data .layui-form-checkbox[lay-skin=primary]:hover > i {
+  border-color: #FF930D;
 }
 .support_team .request_data .title {
   font-size: 0.2rem;
@@ -1307,7 +1316,7 @@ body {
   background-color: rgba(0, 0, 0, 0.1);
 }
 .product_details .table_content .checkout_wrap .item .checkout_list .list_item_wrap .list {
-  padding: 0 0 0.1rem 0;
+  padding: 0 0 0.1rem 0.1rem;
   display: none;
 }
 .product_details .table_content .checkout_wrap .item .checkout_list .list_item_wrap .list .check_li {
@@ -1648,6 +1657,9 @@ html {
   .index .stay_update .c_message {
     background: #0A1E33;
   }
+  .index .stay_update .c_message .form_wrap {
+    padding: 0 !important;
+  }
   .index .stay_update .c_message .form_wrap .row .item {
     padding: 0 !important;
     margin-bottom: 0.2rem;
@@ -1679,6 +1691,9 @@ html {
   .contact_us .info .right_item {
     padding-top: 0.3rem;
     align-items: center;
+  }
+  .contact_us #map_box {
+    height: 6rem;
   }
   .about_us .synopsis .content_wrap {
     padding: 0.1rem;

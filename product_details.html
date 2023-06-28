@@ -648,7 +648,8 @@
                               <i class="layui-icon layui-icon-username"></i>
                             </div> -->
                             <input type="text" lay-affix="search" lay-filter="search" lay-options="{split: true}"
-                                placeholder="Please enter the keywords" class="layui-input">
+                                placeholder="Please enter the keywords" class="layui-input" required autocomplete="off"
+                                lay-verify="title" @onkeydown="tab(event)" id="submitSearch">
                         </div>
                     </div>
                 </div>
@@ -816,7 +817,7 @@
                         <div class="item col-xs-12 col-sm-12 col-md-8 col-lg-8 wow slideInRight"
                             data-wow-duration="1.2s">
                             <h5 class="check_table_title">15 of 894 documents</h5>
-                            <table class="layui-table" id="checkout_table">
+                            <table class="layui-table" id="checkout_table" lay-data="{id: 'checkTable'}">
                                 <div class="rotate_icon">
                                     <i class="iconfont icon-shang1"></i>
                                 </div>
@@ -1002,11 +1003,13 @@
     }
 
     // 表格初始化
-    function table_init(element, data, cols) {
+    function table_init(element, data, cols, rander = false) {
+        console.log('rander', rander);
+
         layui.use(function () {
             var table = layui.table;
-
             table.render({
+                id: rander ? 'checkTable' : '',
                 elem: element, // table id 模板
                 data, // 数据
                 count: data.length, // 数据总数量
@@ -1048,6 +1051,21 @@
             console.log(data);
         });
 
+        //自定义验证规则
+        form.verify({
+            title: function (value) {
+                if (value.length < 5) {
+                    return '标题至少得5个字符啊';
+                }
+            },
+            pass: [
+                /^[\S]{6,12}$/, '密码必须6到12位，且不能出现空格'
+            ],
+            content: function (value) {
+                layedit.sync(editIndex);
+            }
+        });
+
         // 搜索
         form.on('input-affix(search)', function (data) {
             var elem = data.elem; // 输入框
@@ -1074,7 +1092,7 @@
                 value
             });
 
-            await table_init('#checkout_table', table2_data, table2_cols);
+            await table_init('#checkout_table', table2_data, table2_cols, rander = true);
         });
 
         // 获取数据
@@ -1105,6 +1123,12 @@
     $('.product_details .checkout_wrap .checkout_list .check_head').click(function () {
         $(this).siblings('.list').stop().slideToggle();
     })
+
+    $("#submitSearch").keydown(function (e) {
+        if (e.keyCode == 13) {
+            
+        }
+    });
 </script>
 
 </html>

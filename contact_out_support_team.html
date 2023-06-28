@@ -533,21 +533,22 @@
                 <div class="container">
                     <div class="layui-form">
                         <p class="title">Support Request</p>
-                        <div class="layui-form-item wow fadeInUp" data-wow-duration="1.2s">
-                            <input type="checkbox" name="Sales Support" value="1" title="Sales Support">
-                        </div>
-                        <div class="layui-form-item wow fadeInUp" data-wow-duration="1.4s">
-                            <input type="checkbox" name="LED Component Support" value="2" title="LED Component Support">
-                        </div>
-                        <div class="layui-form-item wow fadeInUp" data-wow-duration="1.6s">
-                            <input type="checkbox" name="Chips Support" value="3" title="Chips Support">
-                        </div>
-                        <div class="layui-form-item wow fadeInUp" data-wow-duration="1.8s">
-                            <input type="checkbox" name="Application Support" value="4" title="Application Support">
-                        </div>
-                        <div class="layui-form-item wow fadeInUp" data-wow-duration="2s">
-                            <input type="checkbox" name="General Support Question" value="5"
-                                title="General Support Question">
+                        <div class="layui-form-item">
+                            <div class="wow fadeInUp" data-wow-duration="1.2s">
+                                <input type="radio" name="SalesSupport" value="1" title="Sales Support">
+                            </div>
+                            <div class="wow fadeInUp" data-wow-duration="1.4s">
+                                <input type="radio" name="SalesSupport" value="2" title="LED Component Support">
+                            </div>
+                            <div class="wow fadeInUp" data-wow-duration="1.6s">
+                                <input type="radio" name="SalesSupport" value="3" title="Chips Support">
+                            </div>
+                            <div class="wow fadeInUp" data-wow-duration="1.8s">
+                                <input type="radio" name="SalesSupport" value="4" title="Application Support">
+                            </div>
+                            <div class="wow fadeInUp" data-wow-duration="2s">
+                                <input type="radio" name="SalesSupport" value="5" title="General Support Question">
+                            </div>
                         </div>
 
                         <div class="item_li row">
@@ -639,23 +640,24 @@
                         <div class="layui-form-item wow fadeInUp" data-wow-duration="1.2s">
                             <label class="layui-form-label">Postal Code</label>
                             <!-- lay-reqText：提示 -->
-                            <input type="text" name="Postal Code" autocomplete="off"
-                                placeholder="Please enter the" class="layui-input">
+                            <input type="text" name="Postal Code" autocomplete="off" placeholder="Please enter the"
+                                class="layui-input">
                         </div>
 
                         <div class="layui-form-item wow fadeInUp" data-wow-duration="1.2s">
                             <label class="layui-form-label required">Country</label>
                             <!-- lay-reqText：提示 -->
-                            <input type="text" name="Country" autocomplete="off"
-                                placeholder="Please enter the" lay-verify="required"
-                                lay-reqText="The mandatory field cannot be empty" class="layui-input">
+                            <input type="text" name="Country" autocomplete="off" placeholder="Please enter the"
+                                lay-verify="required" lay-reqText="The mandatory field cannot be empty"
+                                class="layui-input">
                         </div>
 
                         <div class="layui-form-item wow fadeInUp" data-wow-duration="1.2s">
                             <label class="layui-form-label required">Message</label>
                             <!-- lay-reqText：提示 -->
                             <textarea name="Message" lay-verify="required"
-                            lay-reqText="The mandatory field cannot be empty" placeholder="Please enter the" autocomplete="off" class="layui-textarea"></textarea>
+                                lay-reqText="The mandatory field cannot be empty" placeholder="Please enter the"
+                                autocomplete="off" class="layui-textarea"></textarea>
                             <p class="text">5000 characters remaining</p>
                         </div>
 
@@ -665,18 +667,21 @@
                             <div class="layui-form-item wow fadeInUp" data-wow-duration="1.2s">
                                 <label class="layui-form-label required">Privacy Acknowledgement</label>
                                 <input type="checkbox" name="Privacy Acknowledgement" value="YES" title="YES" />
-                                <p class="sub_text">I acknowledge that I have been given access to Smart Global Holdings Privacy Policy.</p>
+                                <p class="sub_text">I acknowledge that I have been given access to Smart Global Holdings
+                                    Privacy Policy.</p>
                             </div>
 
                             <div class="layui-form-item wow fadeInUp" data-wow-duration="1.2s">
                                 <label class="layui-form-label required">Comms Acknowledgement</label>
                                 <input type="checkbox" name="Comms Acknowledgement" value="YES" title="YES" />
-                                <p class="sub_text">I acknowledge that I may, and am willing to, receive future communications and Smart Global Holdings regarding this inquiry.</p>
+                                <p class="sub_text">I acknowledge that I may, and am willing to, receive future
+                                    communications and Smart Global Holdings regarding this inquiry.</p>
                             </div>
                         </div>
 
                         <div class="layui-form-item wow fadeInUp">
-                            <button class="layui-btn text-uppercase" lay-submit lay-filter="demo-checkbox-submit">SUBMIT</button>
+                            <button class="layui-btn text-uppercase" lay-submit
+                                lay-filter="demo-checkbox-submit">SUBMIT</button>
                         </div>
                     </div>
                 </div>
